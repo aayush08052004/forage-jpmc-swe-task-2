@@ -1,0 +1,217 @@
+From 2603ecde1631b11277e2ff9413ef31ae32d1aba8 Mon Sep 17 00:00:00 2001
+From: Aayush Singh <aayushsingh08052004@gmail.com>
+Date: Fri, 7 Jun 2024 01:34:19 +0530
+Subject: [PATCH] Create Patch File
+
+---
+ package-lock.json | 48 ++++++++++++++++++++++++++++++++++++++++-------
+ package.json      |  1 +
+ src/App.tsx       | 27 +++++++++++++++++++-------
+ src/Graph.tsx     | 12 ++++++++----
+ 4 files changed, 70 insertions(+), 18 deletions(-)
+
+diff --git a/package-lock.json b/package-lock.json
+index b144684..99f5816 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -23,6 +23,7 @@
+         "react-scripts": "^5.0.1"
+       },
+       "devDependencies": {
++        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+         "awesome-typescript-loader": "^5.2.1",
+         "source-map-loader": "^0.2.4",
+         "typescript": "^3.2.4"
+@@ -691,9 +692,17 @@
+       }
+     },
+     "node_modules/@babel/plugin-proposal-private-property-in-object": {
+-      "version": "7.21.0-placeholder-for-preset-env.2",
+-      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz",
+-      "integrity": "sha512-SOSkfJDddaM7mak6cPEpswyTRnuRltl429hMraQEglW+OkovnCzsiszTmsrlY//qLFjCpQDFRvjdm2wA5pPm9w==",
++      "version": "7.21.11",
++      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.11.tgz",
++      "integrity": "sha512-0QZ8qP/3RLDVBwBFoWAwCtgcDZJVwA5LUJRZU8x2YFfKNuFq161wK3cuGrALu5yiPu+vzwTAg/sMWVNeWeNyaw==",
++      "deprecated": "This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.",
++      "dev": true,
++      "dependencies": {
++        "@babel/helper-annotate-as-pure": "^7.18.6",
++        "@babel/helper-create-class-features-plugin": "^7.21.0",
++        "@babel/helper-plugin-utils": "^7.20.2",
++        "@babel/plugin-syntax-private-property-in-object": "^7.14.5"
++      },
+       "engines": {
+         "node": ">=6.9.0"
+       },
+@@ -1928,6 +1937,17 @@
+         "@babel/core": "^7.0.0-0"
+       }
+     },
++    "node_modules/@babel/preset-env/node_modules/@babel/plugin-proposal-private-property-in-object": {
++      "version": "7.21.0-placeholder-for-preset-env.2",
++      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz",
++      "integrity": "sha512-SOSkfJDddaM7mak6cPEpswyTRnuRltl429hMraQEglW+OkovnCzsiszTmsrlY//qLFjCpQDFRvjdm2wA5pPm9w==",
++      "engines": {
++        "node": ">=6.9.0"
++      },
++      "peerDependencies": {
++        "@babel/core": "^7.0.0-0"
++      }
++    },
+     "node_modules/@babel/preset-modules": {
+       "version": "0.1.6-no-external-plugins",
+       "resolved": "https://registry.npmjs.org/@babel/preset-modules/-/preset-modules-0.1.6-no-external-plugins.tgz",
+@@ -21743,10 +21763,16 @@
+       }
+     },
+     "@babel/plugin-proposal-private-property-in-object": {
+-      "version": "7.21.0-placeholder-for-preset-env.2",
+-      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz",
+-      "integrity": "sha512-SOSkfJDddaM7mak6cPEpswyTRnuRltl429hMraQEglW+OkovnCzsiszTmsrlY//qLFjCpQDFRvjdm2wA5pPm9w==",
+-      "requires": {}
++      "version": "7.21.11",
++      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.11.tgz",
++      "integrity": "sha512-0QZ8qP/3RLDVBwBFoWAwCtgcDZJVwA5LUJRZU8x2YFfKNuFq161wK3cuGrALu5yiPu+vzwTAg/sMWVNeWeNyaw==",
++      "dev": true,
++      "requires": {
++        "@babel/helper-annotate-as-pure": "^7.18.6",
++        "@babel/helper-create-class-features-plugin": "^7.21.0",
++        "@babel/helper-plugin-utils": "^7.20.2",
++        "@babel/plugin-syntax-private-property-in-object": "^7.14.5"
++      }
+     },
+     "@babel/plugin-syntax-async-generators": {
+       "version": "7.8.4",
+@@ -22532,6 +22558,14 @@
+         "babel-plugin-polyfill-regenerator": "^0.6.1",
+         "core-js-compat": "^3.31.0",
+         "semver": "^6.3.1"
++      },
++      "dependencies": {
++        "@babel/plugin-proposal-private-property-in-object": {
++          "version": "7.21.0-placeholder-for-preset-env.2",
++          "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-private-property-in-object/-/plugin-proposal-private-property-in-object-7.21.0-placeholder-for-preset-env.2.tgz",
++          "integrity": "sha512-SOSkfJDddaM7mak6cPEpswyTRnuRltl429hMraQEglW+OkovnCzsiszTmsrlY//qLFjCpQDFRvjdm2wA5pPm9w==",
++          "requires": {}
++        }
+       }
+     },
+     "@babel/preset-modules": {
+diff --git a/package.json b/package.json
+index 39a6837..fe62646 100644
+--- a/package.json
++++ b/package.json
+@@ -33,6 +33,7 @@
+     "not op_mini all"
+   ],
+   "devDependencies": {
++    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+     "awesome-typescript-loader": "^5.2.1",
+     "source-map-loader": "^0.2.4",
+     "typescript": "^3.2.4"
+diff --git a/src/App.tsx b/src/App.tsx
+index 0728518..40745b1 100755
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -7,7 +7,8 @@ import './App.css';
+  * State declaration for <App />
+  */
+ interface IState {
+-  data: ServerRespond[],
++  data: ServerRespond[], 
++  showGraph:boolean 
+ }
+ 
+ /**
+@@ -22,6 +23,7 @@ class App extends Component<{}, IState> {
+       // data saves the server responds.
+       // We use this state to parse data down to the child element (Graph) as element property
+       data: [],
++      showGraph:false,
+     };
+   }
+ 
+@@ -29,19 +31,30 @@ class App extends Component<{}, IState> {
+    * Render Graph react component with state.data parse as property data
+    */
+   renderGraph() {
+-    return (<Graph data={this.state.data}/>)
++    if (this.state.showGraph) {
++            return (<Graph data={this.state.data}/>)
++          }
+   }
+ 
+   /**
+    * Get new data from server and update the state with the new data
+    */
+   getDataFromServer() {
+-    DataStreamer.getData((serverResponds: ServerRespond[]) => {
+-      // Update the state by creating a new array of data that consists of
+-      // Previous data in the state and the new data from server
+-      this.setState({ data: [...this.state.data, ...serverResponds] });
+-    });
++    let x = 0;
++    const interval = setInterval(() => {
++      DataStreamer.getData((serverResponds: ServerRespond[]) => {
++        this.setState({
++          data: serverResponds,
++          showGraph: true,
++        });
++      });
++      x++;  // Increment x here
++      if (x > 1000) {
++        clearInterval(interval);
++      }
++    }, 100);
+   }
++  
+ 
+   /**
+    * Render the App react component
+diff --git a/src/Graph.tsx b/src/Graph.tsx
+index 3b2a7da..93eabda 100644
+--- a/src/Graph.tsx
++++ b/src/Graph.tsx
+@@ -14,7 +14,7 @@ interface IProps {
+  * Perspective library adds load to HTMLElement prototype.
+  * This interface acts as a wrapper for Typescript compiler.
+  */
+-interface PerspectiveViewerElement {
++interface PerspectiveViewerElement extends HTMLElement {
+   load: (table: Table) => void,
+ }
+ 
+@@ -32,8 +32,7 @@ class Graph extends Component<IProps, {}> {
+ 
+   componentDidMount() {
+     // Get element to attach the table from the DOM.
+-    const elem: PerspectiveViewerElement = document.getElementsByTagName('perspective-viewer')[0] as unknown as PerspectiveViewerElement;
+-
++    const elem = document.getElementsByTagName('perspective-viewer')[0] as unknown as PerspectiveViewerElement;
+     const schema = {
+       stock: 'string',
+       top_ask_price: 'float',
+@@ -41,7 +40,7 @@ class Graph extends Component<IProps, {}> {
+       timestamp: 'date',
+     };
+ 
+-    if (window.perspective && window.perspective.worker()) {
++    if (window.perspective) {
+       this.table = window.perspective.worker().table(schema);
+     }
+     if (this.table) {
+@@ -49,6 +48,11 @@ class Graph extends Component<IProps, {}> {
+ 
+       // Add more Perspective configurations here.
+       elem.load(this.table);
++      elem.setAttribute('view', 'y_line');
++      elem.setAttribute('column-pivots', '["stock"]');
++      elem.setAttribute('row-pivots', '["timestamp"]');
++      elem.setAttribute('columns', '["top_ask_price"]');
++      elem.setAttribute('aggregates', '{"stock":"distinct count","top_ask_price":"avg","top_bid_price":"avg","timestamp":"distinct count"}');
+     }
+   }
+ 
+-- 
+2.45.2.windows.1
+
